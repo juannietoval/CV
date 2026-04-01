@@ -266,12 +266,6 @@ export default function App() {
                   <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/30 px-3 py-1 rounded-full border border-white/20">
                     <Mail size={12} className="md:w-[14px]" /> {PROFESSOR_DATA.email}
                   </span>
-                  <span className="flex items-center gap-2 text-xs md:text-sm text-indigo-700 bg-indigo-50/50 px-3 py-1 rounded-full border border-indigo-100/50">
-                    <Award size={12} className="md:w-[14px]" /> {PROFESSOR_DATA.faculty}
-                  </span>
-                  <span className="flex items-center gap-2 text-xs md:text-sm text-indigo-700 bg-indigo-50/50 px-3 py-1 rounded-full border border-indigo-100/50">
-                    <BookOpen size={12} className="md:w-[14px]" /> {PROFESSOR_DATA.department}
-                  </span>
                 </div>
 
                 <div className="expandable-content">
