@@ -46,7 +46,7 @@ const AcademiaIcon = ({ size = 20 }: { size?: number }) => (
 
 // --- DATA CONFIGURATION (El profesor puede editar esto fácilmente) ---
 const PROFESSOR_DATA = {
-  name: "Miguel Angel Puentes CASTRO",
+  name: "Miguel Angel Puentes Castro",
   title: "Doctor en Ciencias de la Educación",
   profileImage: "https://raw.githubusercontent.com/juannietoval/CV-Miguel-Angel-Puentes-CASTRO/main/content.jpg",
   bio: "Investigador especializado en la unidad del signo epistemológico entre Realidad y Virtualidad. Con amplia formación en Comunicación Educativa, mi trabajo se centra en las implicaciones pedagógicas de las nuevas tecnologías y la comunicación mediatizada.",
@@ -225,8 +225,8 @@ export default function App() {
       {/* Navegación */}
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'py-2 md:py-3' : 'py-4 md:py-6'}`}>
         <div className="max-w-5xl mx-auto px-4 md:px-6">
-          <div className="glass rounded-full px-5 md:px-8 py-2 md:py-3 flex justify-between items-center">
-            <div className="flex gap-4 md:gap-8 text-[11px] md:text-sm font-semibold uppercase tracking-widest">
+          <div className="glass rounded-full px-4 md:px-8 py-2 md:py-3 flex justify-center items-center bg-gradient-to-r from-indigo-100/70 via-white/80 to-blue-100/70 border-white/40 shadow-lg shadow-indigo-200/20">
+            <div className="flex flex-wrap justify-center gap-3 md:gap-8 text-[10px] sm:text-[11px] md:text-sm font-bold uppercase tracking-wider md:tracking-widest">
               <a href="#bio" className="hover:text-indigo-600 transition-colors">Bio</a>
               <a href="#cv" className="hover:text-indigo-600 transition-colors">Formación</a>
               <a href="#experience" className="hover:text-indigo-600 transition-colors">Experiencia</a>
@@ -487,23 +487,23 @@ export default function App() {
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="p-5 md:p-6 flex-1 flex flex-col justify-between">
-                    <div>
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-indigo-500 mb-1 block">
+                  <div className="flex-1 flex flex-col">
+                    <div className="p-6 md:p-8 flex-1 flex flex-col justify-start">
+                      <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-indigo-500 mb-3 block">
                         {product.type}
                       </span>
-                      <h3 className="serif text-lg md:text-xl font-bold mb-2 group-hover:text-indigo-600 transition-colors leading-tight">
+                      <h3 className="serif text-xl md:text-2xl font-bold mb-4 group-hover:text-indigo-600 transition-colors leading-tight">
                         {product.title}
                       </h3>
-                      <p className="text-xs md:text-sm text-gray-600 line-clamp-2 md:line-clamp-3">
+                      <p className="text-sm md:text-base text-gray-600 line-clamp-3 md:line-clamp-4 leading-relaxed">
                         {product.description}
                       </p>
                     </div>
                     <a 
                       href={product.link} 
-                      className="mt-4 inline-flex items-center gap-2 text-xs md:text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
+                      className="w-full py-4 md:py-5 bg-indigo-600/5 hover:bg-indigo-600/10 border-t border-white/40 text-indigo-700 font-bold flex items-center justify-center gap-3 transition-all duration-300 group/btn"
                     >
-                      Ver más <ExternalLink size={12} className="md:w-[14px]" />
+                      Ver más <ExternalLink size={18} className="group-hover/btn:translate-x-1 transition-transform" />
                     </a>
                   </div>
                 </motion.div>
