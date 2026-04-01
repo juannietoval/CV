@@ -24,25 +24,7 @@ import {
   Library
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-
-// --- ICONOS PERSONALIZADOS (SVG) ---
-const ScholarIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.67 3.701A7.02 7.02 0 0 1 12 11.5c2.59 0 4.91 1.4 6.22 3.581L24 11.5 12 0z" />
-  </svg>
-);
-
-const ResearchGateIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M19.586 0c-.818 0-1.508.19-2.06.543-.54.353-.994.858-1.39 1.541l-.329.538-.326-.538c-.403-.683-.858-1.188-1.398-1.541-.552-.353-1.242-.543-2.06-.543H0v24h12.023c.818 0 1.508-.19 2.06-.543.54-.353.994-.858 1.39-1.541l.329-.538.326.538c.403.683.858 1.188 1.398 1.541.552.353 1.242.543 2.06.543H24V0h-4.414zM10.567 21.041H2.959V2.959h7.608c.634 0 1.107.114 1.424.34.316.227.56.54.73.94l.206.482.206-.482c.17-.4.414-.713.73-.94.317-.226.79-.34 1.424-.34h7.608v18.082h-7.608c-.634 0-1.107-.114-1.424-.34-.316-.227-.56-.54-.73-.94l-.206-.482-.206.482c-.17.4-.414.713-.73.94-.317.226-.79.34-1.424.34zM18.717 14.345c1.127 0 2.041-.914 2.041-2.041s-.914-2.041-2.041-2.041-2.041.914-2.041 2.041.914 2.041 2.041 2.041zm0-5.567c1.945 0 3.526 1.581 3.526 3.526s-1.581 3.526-3.526 3.526-3.526-1.581-3.526-3.526 1.581-3.526 3.526-3.526zM5.311 18.082V5.918h4.256c1.678 0 3.038 1.36 3.038 3.038 0 1.29-.806 2.392-1.936 2.825l1.936 3.264H10.77l-1.846-3.111H7.247v3.111H5.311zm1.936-8.205h2.32c.606 0 1.102.496 1.102 1.102 0 .606-.496 1.102-1.102 1.102h-2.32V9.877z" />
-  </svg>
-);
-
-const AcademiaIcon = ({ size = 20 }: { size?: number }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0L2.4 12l1.6 2 8-10 8 10 1.6-2L12 0zm0 14c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4zm0 6c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM0 24h24v-2H0v2z" />
-  </svg>
-);
+import { AcademiaIcon, GoogleScholarIcon, ResearchGateIcon } from './components/CustomIcons';
 
 // --- DATA CONFIGURATION (El profesor puede editar esto fácilmente) ---
 const PROFESSOR_DATA = {
@@ -231,7 +213,7 @@ export default function App() {
               <a href="#cv" className="hover:text-indigo-600 transition-colors">Formación</a>
               <a href="#experience" className="hover:text-indigo-600 transition-colors">Experiencia</a>
               <a href="#complementary" className="hover:text-indigo-600 transition-colors">Cursos</a>
-              <a href="#products" className="hover:text-indigo-600 transition-colors">Investigación</a>
+              <a href="#products" className="hover:text-indigo-600 transition-colors">Publicaciones</a>
             </div>
           </div>
         </div>
@@ -289,7 +271,7 @@ export default function App() {
                       data-tooltip="Google Scholar" 
                       className="social-btn group p-4 glass rounded-2xl hover:bg-[#4285F4] hover:scale-110 text-[#4285F4] hover:text-white shadow-sm hover:shadow-xl"
                     >
-                      <ScholarIcon size={22} />
+                      <GoogleScholarIcon size={22} className="transition-transform group-hover:rotate-12" />
                     </a>
                     <a 
                       href={PROFESSOR_DATA.social.researchgate} 
@@ -298,7 +280,7 @@ export default function App() {
                       data-tooltip="ResearchGate" 
                       className="social-btn group p-4 glass rounded-2xl hover:bg-[#00ccbb] hover:scale-110 text-[#00ccbb] hover:text-white shadow-sm hover:shadow-xl"
                     >
-                      <ResearchGateIcon size={22} />
+                      <ResearchGateIcon size={22} className="transition-transform group-hover:rotate-12" />
                     </a>
                     <a 
                       href={PROFESSOR_DATA.social.academia} 
@@ -307,7 +289,7 @@ export default function App() {
                       data-tooltip="Academia.edu" 
                       className="social-btn group p-4 glass rounded-2xl hover:bg-[#313535] hover:scale-110 text-[#313535] hover:text-white shadow-sm hover:shadow-xl"
                     >
-                      <AcademiaIcon size={22} />
+                      <AcademiaIcon size={22} className="transition-transform group-hover:rotate-12" />
                     </a>
                     <a 
                       href={PROFESSOR_DATA.social.repository} 
@@ -488,17 +470,22 @@ export default function App() {
                     />
                   </div>
                   <div className="flex-1 flex flex-col">
-                    <div className="p-6 md:p-8 flex-1 flex flex-col justify-start">
+                    <a 
+                      href={product.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="p-6 md:p-8 flex-1 flex flex-col justify-start group/content"
+                    >
                       <span className="text-[10px] md:text-[11px] font-bold uppercase tracking-[0.2em] text-indigo-500 mb-3 block">
                         {product.type}
                       </span>
-                      <h3 className="serif text-xl md:text-2xl font-bold mb-4 group-hover:text-indigo-600 transition-colors leading-tight">
+                      <h3 className="serif text-xl md:text-2xl font-bold mb-4 group-hover/content:text-indigo-600 transition-colors leading-tight">
                         {product.title}
                       </h3>
                       <p className="text-sm md:text-base text-gray-600 line-clamp-3 md:line-clamp-4 leading-relaxed">
                         {product.description}
                       </p>
-                    </div>
+                    </a>
                     <a 
                       href={product.link} 
                       className="w-full py-4 md:py-5 bg-indigo-600/5 hover:bg-indigo-600/10 border-t border-white/40 text-indigo-700 font-bold flex items-center justify-center gap-3 transition-all duration-300 group/btn"
