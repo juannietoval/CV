@@ -76,7 +76,7 @@ body {
 }
 
 .expanded .expandable-content {
-  max-height: 8000px;
+  max-height: 20000px;
 }
 
 /* Estilos para botones sociales */

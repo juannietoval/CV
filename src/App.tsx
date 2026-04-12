@@ -13,6 +13,8 @@ import {
   ExternalLink, 
   GraduationCap, 
   Award, 
+  Gavel,
+  Calendar,
   MapPin,
   Linkedin,
   Twitter,
@@ -268,6 +270,983 @@ const PROFESSOR_DATA = {
         teaching: ["Diseño gráfico", "Video", "Informática", "Impresos", "Informática educativa I"]
       }
     }
+  ],
+  tutoring: [
+    {
+      type: "Tesis de doctorado",
+      title: "Implementación del Modelo Aula Invertida (Flipped classroom) Estrategias de Enseñanza-Aprendizaje en el Área de Ciencias Sociales para Estudiantes de Básica Secundaria y Medía",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "En curso",
+      year: "2024",
+      student: "",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "ENSEÑANZA DE LA FÍSICA BASADA EN LOS FACTORES ANTROPOLÓGICOS Y EL CONTEXTO SOCIAL",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2022",
+      student: "Luis Enrique Castañeda González",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Imaginarios alrededor de las rutinas de entretenimiento en los jóvenes de los grados novenos, décimos y onces de la Institución Educativa Román María Valencia de Calarcá - Quindío a partir de la pandemia COVID-19",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2021",
+      student: "Mario Alexander Arenas Agudelo",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "El uso de la Tecnología en el proceso de enseñanza - aprendizaje de la física en las áreas rurales, como estrategias aplicables en los colegios públicos del Distrito de los Pozos - Herrera en la República de Panamá",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2024",
+      student: "Lourdes Virginia González",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Polisemia y pobreza léxica como obstáculos en la enseñanza del concepto medir y su tratamiento estadístico",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2022",
+      student: "Reyes Villarreal Miranda",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Identificación De Las Nuevas Construcciones Simbólicas Del Sujeto En La Relación Sugar Daddy – Sugar Baby En La Producción De La Red Social Twitter",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2020",
+      student: "JULIAN DAVID NOGOA ARRUBLA",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Arabia Imaginada",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2021",
+      student: "Liliana Quintero Marin, Jaime Giovanni Guisado Sepúlveda",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "El Self-Body de los Jóvenes: Un Análisis de los Relatos de Sí en las Cartografías del Cuerpo",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2021",
+      student: "ANYHELO ECHEVERRI SÁNCHEZ",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Imaginarios del grafiti y el arte público en la ciudad de Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2021",
+      student: "Mónica Espinosa Gallón",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Mirada A La Construcción De Imaginarios Urbanos, Desde Las Rutinas De Tiempo Libre En El Marco De La Pandemia Por COVID-19, De Los Jóvenes De La Institución Educativa Juan XXIII Del Barrio Cuba De La Ciudad De Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2021",
+      student: "clara patricia mariscal jimenez, Mónica María Osorio Alvarez",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de maestría",
+      title: "Comunicación y educación en procesos comunitarios",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "En curso",
+      year: "2018",
+      student: "Felipe Gallego",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "ALFABETIZACIÓN DIGITAL EN ADULTOS MAYORES DEL GRUPO DE LA TERCERA EDAD DEL BARRIO PARQUE INDUSTRIAL DE PEREIRA, DESDE LA PERSPECTIVA DEL APRENDIZAJE SIGNIFICATIVO",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2015",
+      student: "Diana Cristina Ospina Valencia",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Los emojis, el lenguaje emergente de la cibercultura",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2021",
+      student: "Natalia Patiño Osorio",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Realidad aumentada como herramienta que potencialice el aprendizaje significativo en geometría básica del grado tercero de la Institución Educativa Instituto Estrada",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2016",
+      student: "Gómez Carmona, Jorge Humberto; López Quintero, Daniel",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "LA ACTITUD CRÍTICA EN EL PROCESO DE ALFABETIZACIÓN MEDIÁTICA DESARROLLADA EN LA ÁREA DE INFORMÁTICA EN ESTUDIANTES DE GRADO 11",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2016",
+      student: "STEFANY CASTILLO JARAMILLO, PAULA GARCIA HERRERA, DANIELA MACHADO MAYA",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Fomento a la lectura y la escritura por medio de la creación artística del libro álbum en la biblioteca comunitaria Andrés Caicedo",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2020",
+      student: "Mariana Patiño Arismendi",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Rugby como metodología de aprendizaje en la historia de vida de las integrantes del equipo femenino Rhinos Femme",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2020",
+      student: "Yuliana Zuluaga Vanegas",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Sistematización de emprendimientos en los Licenciados en Comunicación e Informática Educativa",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2020",
+      student: "Sebastián Rodríguez Arias",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Imaginarios que construyeron los usuarios de la FanPage “UNEES” sobre los estudiantes de educación superior durante el paro estudiantil del 10 de octubre del 2018 al 21 de enero del 2019",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2020",
+      student: "Brayan Cañaveral Osorio - Valeria Galvis López - Juan Pablo Torres Giraldo",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Estrategias de comunicación de la emisora Universitaria Estéreo para fomentar la integración con la comunidad de la Universidad Tecnológica de Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2020",
+      student: "Geraldine Hurtado García",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Radio escolar como estrategia educomunicativa en la comunidad: Instituto Tecnológico Santa Rosa de Cabal",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2019",
+      student: "Jhonatan Estiven Correa Londoño / Yury Juliana Velásquez Alarcón",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "El kambalachi (trueque), como propuesta pedagógica para la resignificación del pensamiento en el Pueblo Inga de Aponte",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2019",
+      student: "Martha Yaneth Jojoa Mavisoy",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Géneros discursivos en el ámbito académico en la Licenciatura en Comunicación e Informática Educativa de la Universidad Tecnológica de Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2019",
+      student: "Jessica Jazmín Aguirre Guarín",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Diseño de una propuesta didáctica para la implementación de la fotografía en el aula de clase en la asignatura de educación artística en estudiantes de 4° de primaria de la Institución Educativa Santa Sofía en el municipio de Dosquebradas",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2018",
+      student: "Alejandro Mesa Mejía",
+      role: "Tutor principal"
+    },
+    {
+      type: "Trabajo de grado de pregrado",
+      title: "Entre álbumes de familia : Construcción de memoria en la mujer pereirana",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      status: "Concluida",
+      year: "2016",
+      student: "Erika Betancourt Urrea",
+      role: "Tutor principal"
+    }
+  ],
+  jury: [
+    {
+      type: "Pregrado",
+      title: "Imaginarios Urbanos Del Público De Ciudadanos De La Vereda La Florida",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "Juan Pablo Agudelo Muriel, Sergio Iván Cardona Giraldo Y Natalia Ramírez Marín"
+    },
+    {
+      type: "Maestría",
+      title: "Los Estereotipos Del Selfie: Narrativas Del Yo",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "Javier Ovidio Giraldo"
+    },
+    {
+      type: "Especialización",
+      title: "Principales Causas De Las Deficiencias En Cinemática En Estudiantes De 11O Bachiller En Ciencias",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Especialización en Enseñanza de la física",
+      student: "Kharla Michelle Molinares"
+    },
+    {
+      type: "Maestría",
+      title: "Televidencias y Recepciones. Caracterización de audiencias televisivas en la Institución Educativa Santa Juana de Lestonnac",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "German David Prada Salazar y Keli Andrea Guevara Arbeláez"
+    },
+    {
+      type: "Maestría",
+      title: "Culturambie: validación de aprendizajes en prácticas educativas TIC",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "Jamileth Sorai Bedoya Agudelo y Leidy Johana Zuleta Ramírez"
+    },
+    {
+      type: "Especialización",
+      title: "La motivación de los estudiantes en el proceso de aprendizaje de la física",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Especialización en Enseñanza de la física",
+      student: ""
+    },
+    {
+      type: "Pregrado",
+      title: "Narrativas Futboleras: Otras Miradas A Los Hinchas Del Deportivo Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en Comunicación e Informatica Educativa",
+      student: "Alejandra Mejía Lasso y María Katherine Osorio Osorio"
+    },
+    {
+      type: "Pregrado",
+      title: "Los Videojuegos De Estrategia Y La Resolución De Conflictos",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "Valentina Rodríguez González y Santiago Yepes Serna"
+    },
+    {
+      type: "Pregrado",
+      title: "La Cine Videncia En El Proceso De Recepción Cinematográfico Por Parte De Jóvenes En El Contexto De Los Cineclubes La Caja Y Cine Estudio",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "Daniela Alejandra Hincapié Hoyos, Conrado de Jesús Barrera Henao, Daniela Rojas Rojas"
+    },
+    {
+      type: "Pregrado",
+      title: "Television Didactica: Una Estrategia Educativa Para Fortalecer La Enseñanza-Aprendizaje De Los Estudiantes",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "LICENCIATURA EN COMUNICACION E INFORMATICA EDUCATIVA",
+      student: "Inés Córdoba Campaña y Anny Juliana Diez Collazos"
+    },
+    {
+      type: "Pregrado",
+      title: "Subjetividad Política A Través Del Análisis Expresivo Del Cartel Como Medio De Manifestación, A Propósito De La Cátedra De La Paz Grupo I, En El Eje",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "LICENCIATURA EN COMUNICACION E INFORMATICA EDUCATIVA",
+      student: "Edwin Alexander Giraldo Rincón"
+    },
+    {
+      type: "Maestría",
+      title: "Currículo: ¿Linealidad O No Linealidad? - Hacia El Uso De La Interacción De Las Tic. Caso: Institución Educativa La Inmaculada Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "José Alejandro Zapata Pérez"
+    },
+    {
+      type: "Especialización",
+      title: "Posibilidades Cognitivas, De Infraestructura Y Producción De Contenidos En El Uso De La Realidad Aumentada En El Contexto Escolar: Una Mirada Desde El Estado Del Arte",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Especialización en Enseñanza de la física",
+      student: "Anaika Yamileth Castillo González y Estefany Chow Grandison"
+    },
+    {
+      type: "Pregrado",
+      title: "IMPLEMENTACION DE UN VIDEO EDUCATIVO EN LA ENSEÑANZA Y APRENDIZAJE DE LOS EJES TEMATICOS DE LA INFORMATICA Y TECNOLOGIA DE LOS ESTUDIANTES DE GRADO 6A DE LA INSTITUCION EDUCATIVA REMIGIO ANTONIO CAÑARTE DE LA CIUDAD DE PEREIRA, RISARALDA",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "Octavio de Jesus Jimenez Cardona y Liliana Carolina Giraldo Gallego"
+    },
+    {
+      type: "Pregrado",
+      title: "Tokio imaginado. \"La ciudad desde sus cualidades, calificaciones y escenarios\"",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en Comunicación e Informatica Educativa",
+      student: "NATALY VALENCIA, VIVIANA LOPEZ Y ALEXANDER OROZCO"
+    },
+    {
+      type: "Pregrado",
+      title: "¡RECONOCIENDO LA TELE!",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "LICENCIATURA EN PEDAGOGIA INFANTIL",
+      student: "YENIFER VANESA JIMENEZ ARENAS y DIANA MARCELA CANO VARGAS"
+    },
+    {
+      type: "Pregrado",
+      title: "PROCESOS DE RECEPCIÓN ACTIVA EN LOS ESTUDIANTES DE LA JORNADA COMPLEMENTARIA DEL HOGAR INFANTIL BELENCITO DEL MUNICIPIO DE BELÉN DE UMBRÍA",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "LICENCIATURA EN PEDAGOGIA INFANTIL",
+      student: "NANCY JOHANA GONZALEZ FLOREZ, BIBIANA ANDREA ISAZA FLOREZ y YORLADYS CEBALLOS"
+    },
+    {
+      type: "Pregrado",
+      title: "ANÁLISIS E INTERPRETACIÓN DE UNA UNIDAD DIDACTICA EN LA ENSEÑANZA DEL CUBO",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "LICENCIATURA EN PEDAGOGIA INFANTIL",
+      student: "MARIA CARMENZA ARICAPA GARCIA"
+    },
+    {
+      type: "Maestría",
+      title: "Sociedad Abierta: un Proyecto Inacabado",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRÍA EN FILOSOFÍA",
+      student: "Alba Yaneth Jaramillo Muñoz"
+    },
+    {
+      type: "Maestría",
+      title: "Prácticas Educativas Mediadas por Redes Sociales: Percepciones y Experiencias de Docentes Universitarios",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "Juan Felipe López Zapata"
+    },
+    {
+      type: "Maestría",
+      title: "Narrativa de la memoria colectiva de Cooeducar en tiempos de mediatización",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "Carlos Alberto Delgado, Carlos Arturo Arenas"
+    },
+    {
+      type: "Maestría",
+      title: "El Feminismo Como Codificación Estratégica de Puntos de Resistencia Para la Consolidación de la Democracia Radical",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRÍA EN FILOSOFÍA",
+      student: "Jessica Viviana Obando Correal"
+    },
+    {
+      type: "Pregrado",
+      title: "CIUDAD VICTORIA IMAGINADA: UNA VISIÓN DE LA RENOVACIÓN DESDE LAS REPRESENTACIONES DE LOS JÓVENES PEREIRANOS",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "JESSICA LOZANO RAMÍREZ, MILEIDY GONZÁLEZ MEDINA Y PRISCILA SANTANA GIRALDO"
+    },
+    {
+      type: "Pregrado",
+      title: "APLICACIÓN DE LA TEORÍA TRIADICA DE PEIRCE EN EL GRAFFITI COMO PUNTO DE VISTA CIUDADANO",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "Andrea Palacio Herrera"
+    },
+    {
+      type: "Pregrado",
+      title: "LOS IMAGINARIOS QUE CONSTRUYEN LOS ESTUDIANTES DE GRADO 10 DEL COLEGIO SANTA ISABEL DEL MUNICIPIO DE DOSQUEBRADAS A PARTIR DE LA VISUALIZACIÓN DEL COMERCIAL DE CHICA ÁGUILA",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en comunicación e Informática Educativa",
+      student: "Diana Alejandra Agudelo Osorio y Leidy Viviana Bermúdez Ortiz"
+    },
+    {
+      type: "Maestría",
+      title: "LAS FORMAS DE APRENDER, CONOCER, Y PRODUCIR CONOCIMIENTO SE MODIFICAN, CON LA MEDIACIÓN DE LOS DISPOSITIVOS MÓVILES CELULARES EN EL AULA?",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Maestria en Comunicación Educativa",
+      student: "CARLOS ENRIQUE MARÍN HURTADO"
+    },
+    {
+      type: "Maestría",
+      title: "ARMENIA Y EL QUINDÍO: UN CONTRASTE ENTRE IMAGINARIOS Y REALIDAD",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "JHONI DANIEL SALAZAR GÓMEZ"
+    },
+    {
+      type: "Maestría",
+      title: "Diseño y validación de la propuesta educativa RED en el Aula, orientada a fortalecer desde el enfoque del Aprendizaje Significativo la Competencia Tecnológica en estudiantes de tercer semestre de Licenciatura en Comunicación e Informática Educativas de la Universidad Tecnológica de Pereira",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Maestria en Comunicación Educativa",
+      student: "Marcia Cristina Peláez Sampedro"
+    },
+    {
+      type: "Maestría",
+      title: "Constructivismo? Entornos de enseñanza y aprendizaje incorporando TIC",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Maestria en Comunicación Educativa",
+      student: "Milvi Leonor Tapias Oquendo"
+    },
+    {
+      type: "Maestría",
+      title: "ESCENARIOS Y CALIFICACIONES URBANAS DE ESPACIOS DE LA CIUDAD DE PEREIRA Y SU RELACIÓN CON LAS OPINIONES REGISTRADAS EN GOOGLE MAPS",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Maestria en Comunicación Educativa",
+      student: "YORMAN JULIAN GONZÀLEZ RAMIREZ"
+    },
+    {
+      type: "Maestría",
+      title: "Análisis de la narrativa del discurso periodístico en el marco del proceso de paz: caso Revista Semana en el periodo 2015-2016",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Maestria en Comunicación Educativa",
+      student: "JUAN CAMILO PASCUAS"
+    },
+    {
+      type: "Maestría",
+      title: "MODELO DE ESCRITURA DE PROYECTOS PARA TELEVISIÓN CULTURAL EN CONTEXTOS NACIONALES Y REGIONALES - UN ESTUDIO DE CASO",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Maestria en Comunicación Educativa",
+      student: "WILMER SOTTO SUAREZ"
+    },
+    {
+      type: "Maestría",
+      title: "EVALUACIÓN DE LA PERTINENCIA DEL APRENDIZAJE BASADO EN PROYECTOS (ABP), EN LA IMPLEMENTACIÓN DE UNA ASIGNATURA INCLUIDA EN LA PROPUESTA DE FORMACIÓN POSGRADUAL ESPECIALIZACIÓN EN DIGITALIZACIÓN DE PROCESOS INDUSTRIALES",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRÍA EN ENSEÑANZA DE LA FÍSICA",
+      student: "WILLIAM PRADO MARTÍNEZ - HERNÁN ALBERTO QUINTERO VALLEJO"
+    },
+    {
+      type: "Especialización",
+      title: "Zonula motion capture eje cafetero",
+      institution: "UNIVERSIDAD CATOLICA DE PEREIRA",
+      program: "Especialización gestión de proyectos de diseño e innovación",
+      student: "Yeison Escobar Puentes"
+    },
+    {
+      type: "Pregrado",
+      title: "ALFABETIZACIÓN DIGITAL EN ADULTOS MAYORES DEL GRUPO DE LA TERCERA EDAD DEL BARRIO PARQUE INDUSTRIAL DE PEREIRA, DESDE LA PERSPECTIVA DEL APRENDIZAJE SIGNIFICATIVO",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "Licenciatura en Comunicación e Informática Educativas",
+      student: "DIANA CRISTINA OSPINA VALENCIA"
+    },
+    {
+      type: "Maestría",
+      title: "PEREIRA IMAGINADA: UNA MIRADA DESDE EL SECTOR RURAL",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "GUILLERMO ORBES PANTOJA"
+    },
+    {
+      type: "Pregrado",
+      title: "LA AUTOBIOGRAFÍA COMO METODOLOGÍA DE ENSEÑANZA EN EL PROCESO INVESTIGATIVO",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "ANA CAROLINA RENDÓN CARDONA / PAULA ANDREA RENDÓN CARDONA"
+    },
+    {
+      type: "Maestría",
+      title: "PRÁCTICAS COMUNICATIVAS DE LAS ORGANIZACIONES AFRORISARALDENSES",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "DOUGLAS JEFER YURGAKY COSSIO"
+    },
+    {
+      type: "Maestría",
+      title: "VALIDACIÓN DE APRENDIZAJES EN PRÁCTICAS EDUCATIVAS TIC",
+      institution: "UNIVERSIDAD TECNOLÓGICA DE PEREIRA",
+      program: "MAESTRIA EN COMUNICACION EDUCATIVA",
+      student: "JAMILETH SORAI BEDOYA AGUDELO - LEIDY JOHANA ZULETA RAMÍREZ"
+    }
+  ],
+  events: [
+    {
+      name: "Tercer Coloquio Internacional y Cuarto Nacional de Pensamiento Educativo y Comunicación",
+      type: "Otro",
+      scope: "Internacional",
+      date: "2014-11-10 al 2014-11-11",
+      location: "PEREIRA - Hotel Movich Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO", "OLGA LUCIA BEDOYA"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller Internacional Narrativas Transmedia",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2015-06-26 al 2015-06-27",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller Internacional Circopolis: Errores Inteligentes en la Cultural Digital",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2015-08-28 al 2015-08-29",
+      location: "PEREIRA - Top Deck Hotel Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 5. Proyección del cuidado del género",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-09-21",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 2. Proyección del cuidado ambiental",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-04-13",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 4. Diagnóstico de género",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-08-24",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 1. Diagnóstico ambiental",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-03-16",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Cuidar el ambiente y cuidar la mujer: fortalecimiento de capacidades organizativas en asociaciones campesinas de Risaralda",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2024-01-30 al 2024-12-01",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 3. Plan basado en modelo lógico",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-05-18",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 7. Revisión y ajustes a planes de cuidado",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-11-09",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "XIV Coloquio de investigación en formación ciudadana: El cuidado de la vida y la subjetividad política: resistencias y re- existencias en la formación ciudadana en lo contemporáneo",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2025-02-03 al 2025-10-30",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "XIV Coloquio de investigación en formación ciudadana: El cuidado de la vida y la subjetividad política: resistencias y re-existencias en la formación ciudadana en lo contemporáneo",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2025-09-03 al 2026-03-06",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Jornada de Transferencia Tecnológica en DSpace",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2025-03-07",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Cuidar el ambiente y cuidar la mujer: fortalecimiento de capacidades organizativas en asociaciones campesinas de Risaralda",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-03-16",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Jornada de socialización: Cuidar el ambiente y cuidar la mujer: fortalecimiento de capacidades organizativas",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2024-11-16",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Taller 6. Plan basado en rúbrica para ciudad de género",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-10-19",
+      location: "PEREIRA",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Jornada de Transferencia Tecnológica en DSpace",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2025-03-07",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Jornada de socialización: Cuidar el ambiente y cuidar la mujer: fortalecimiento de capacidades organizativas",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2024-02-03 al 2024-10-26",
+      location: "PEREIRA - Universidad Tecnológica de Pereirars",
+      role: "Organizador",
+      participants: ["JULIO CESAR MURILLO GARCIA", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Primer Coloquio de Investigación Educativa 2024 MCE - EGE",
+      type: "Otro",
+      scope: "Nacional",
+      date: "2024-11-15",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente magistral",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "XIV Coloquio de investigación en formación ciudadana: El cuidado de la vida y la subjetividad política: resistencias y re-existencias en la formación ciudadana de lo contemporáneo",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2025-09-04 al 2025-09-05",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Curso de investigación para Dummies",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2022-10-27",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente magistral",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Acercamiento a la investigación"
+    },
+    {
+      name: "XII Coloquio Colombiano de Investigación en Formación Ciudadana",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2023-09-07 al 2023-09-08",
+      location: "MEDELLÍN - Universidad de Antioquia",
+      role: "Ponente magistral",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Experiencias alrededor de la verdad: implicaciones en la Formación de Sujetos Políticos"
+    },
+    {
+      name: "MICRÓFONO ABIERTO. Espacio de activo de participación en torno a la memoria, la duración del testimonio, el tiempo, la persistencia, el recuerdo y el olvido",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2023-10-30 al 2023-10-31",
+      location: "PEREIRA - Facultad de Bellas Artes y Humanidades",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "V Congreso Virtual Internacional Y XXXVIII Simposio Virtual Internacional En Ciencias Sociales",
+      type: "Congreso",
+      scope: "Internacional",
+      date: "2024-08-28 al 2024-08-30",
+      location: "MEDELLÍN - Universidad Pontificia Bolivariana",
+      role: "Ponente",
+      participants: ["ALVARO DIAZ GOMEZ", "ANA MARIA CALDERON JARAMILLO", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["Universidad Pontificia Bolivariana Seccional Medellín"],
+      product: "Juventud y pandemia: subjetividades femeninas emergentes en tiempos del Covid-19"
+    },
+    {
+      name: "XIII Coloquio de investigación en formación ciudadana",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2024-08-22 al 2024-08-23",
+      location: "ARMENIA - Universidad del Quindio",
+      role: "Ponente magistral",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD DEL QUINDÍO"],
+      product: "Formación en Humanidades: Educación, ciudadanía, memoria y paz en el contexto universitario en Colombia"
+    },
+    {
+      name: "VII Encuentro Internacional sobre la Enseñanza de las Ciencias Exactas y Naturales",
+      type: "Encuentro",
+      scope: "Internacional",
+      date: "2023-09-06",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente",
+      participants: ["LUIS ENRIQUE CASTANEDA GONZALEZ", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Enseñanza de la Física Basada en los Factores Antropológicos y el Contexto Social"
+    },
+    {
+      name: "Realidad virtualidad como unidad. Lección inaugural Escuela de Español y Comunicación Audiovisual",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2020-02-19",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente magistral",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "REALIDAD - VIRTUALIDAD COMO UNIDAD"
+    },
+    {
+      name: "Conmemoración del Día Nacional de las Víctimas",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2024-04-09",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["JUAN MANUEL MARTINEZ HERRERA", "JULIO CESAR MURILLO GARCIA", "LUISA FERNANDA MARULANDA GOMEZ", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Cuidar el ambiente y cuidar la mujer: fortalecimiento de capacidades organizativas en asociaciones campesinas de Risaralda",
+      type: "Taller",
+      scope: "Nacional",
+      date: "2024-02-03 al 2024-08-24",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["JULIO CESAR MURILLO GARCIA", "MELISSA MONTANEZ HOLGUIN", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "XIII Coloquio de investigación en formación ciudadana",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2024-08-22 al 2024-08-23",
+      location: "ARMENIA - Universidad del Quindio",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD DEL QUINDÍO"]
+    },
+    {
+      name: "XII Coloquio Colombiano de Investigación en Formación Ciudadana",
+      type: "Congreso",
+      scope: "Nacional",
+      date: "2023-09-07 al 2023-09-08",
+      location: "MEDELLÍN - Universidad de Antioquía",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD DE ANTIOQUIA"]
+    },
+    {
+      name: "Conversatorio Archivo, Derechos Humanos y Verdad",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2023-05-04",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["DIANA CAROLINA SUAREZ ALBANO", "JUAN MANUEL MARTINEZ HERRERA", "LUISA FERNANDA MARULANDA GOMEZ", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "II Encuentro de Grupos de Investigación del Departamento de Humanidades",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2022-06-09",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente magistral",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Avances en las tendencias conceptuales derivadas de la producción académica del grupo de investigación en Estudios políticos y Jurídicos de la Universidad Tecnológica de Pereira entre los años 2013 - 2020"
+    },
+    {
+      name: "III Encuentro de Grupos de Investigación del Departamento de Humanidades",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2023-03-30",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente magistral",
+      participants: ["LUISA FERNANDA MARULANDA GOMEZ", "MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Diagnóstico para la conformación de un archivo digital de DDHH en lña ciudad de Pereira - Risaralda - Colombia"
+    },
+    {
+      name: "Subjetividad Política en el ámbito de la investigación y la enseñanza de las humanidades. 10 años del grupo de investigación en Estudios Políticos y Jurídicos",
+      type: "Simposio",
+      scope: "Nacional",
+      date: "2023-09-29",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Segunda Jornada de Apropiación Social del Conocimiento de la Facultad de Ciencias de la Educación",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2023-05-10",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Ponente",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO", "OLGA LUCIA BEDOYA"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Creación de una estrategia audiovisual con base en storytelling para cambiar imaginarios urbanos: caso Pereira imaginada y sus croquis ciudadanos"
+    },
+    {
+      name: "La noción de Verdad en la Comisión de la Verdad. Su metodología de trabajo",
+      type: "Seminario",
+      scope: "Nacional",
+      date: "2022-09-30",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "La verdad epistémica",
+      type: "Seminario",
+      scope: "Nacional",
+      date: "2022-10-28",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Verdad y ficción en la autobiografía prospectiva (como una expresión de la verdad en ciencias sociales).",
+      type: "Seminario",
+      scope: "Nacional",
+      date: "2022-11-11",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Reconocer la pluralidad de la comprensión del concepto de verdad",
+      type: "Seminario",
+      scope: "Nacional",
+      date: "2022-10-07",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "I Seminario Internacional Y III Seminario Colombiano De Imaginarios Y Representaciones",
+      type: "Seminario",
+      scope: "Internacional",
+      date: "2020-09-21 al 2020-09-25",
+      location: "Xapala - Virtual",
+      role: "Ponente",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO", "OLGA LUCIA BEDOYA"],
+      institutions: ["UNIVERSIDAD SANTO TOMAS"],
+      product: "Pereira Imaginada. Trazos y representaciones desde los croquis afectivos del ciudadano de a pie"
+    },
+    {
+      name: "II Encuentro Educación con sentidos 2017",
+      type: "Encuentro",
+      scope: "Internacional",
+      date: "2017-09-06 al 2017-09-08",
+      location: "Valencia - Universidad de Valencia",
+      role: "Asistente",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "I Congreso Internacional de Territorios Digitales",
+      type: "Congreso",
+      scope: "Internacional",
+      date: "2017-06-29 al 2017-06-30",
+      location: "Granada - Universidad de Granada",
+      role: "Ponente",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO", "OLGA LUCIA BEDOYA"],
+      institutions: ["UNIVERSIDAD DE GRANADA"],
+      product: "Por los croquis digitales. Pereira imaginada"
+    },
+    {
+      name: "Congreso Internacional de Ética y Democracia",
+      type: "Congreso",
+      scope: "Internacional",
+      date: "2017-11-06 al 2017-11-08",
+      location: "Valencia - Universidad de Valencia - España",
+      role: "Ponente",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["Universitat De Valencia"],
+      product: "Entre pantallas e interfaces: La democracia en tiempos de prosumers"
+    },
+    {
+      name: "Foro y Encuentro de Comunicación alternativa",
+      type: "Encuentro",
+      scope: "Nacional",
+      date: "2018-04-26",
+      location: "PEREIRA - Universidad Tecnológica de Pereira",
+      role: "Organizador",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"]
+    },
+    {
+      name: "Primer encuentro nacional de investigadores en comunicación",
+      type: "Encuentro",
+      scope: "Internacional",
+      date: "2016-05-26 al 2016-05-27",
+      location: "BARRANQUILLA - Universidad del Norte",
+      role: "Ponente",
+      participants: ["MIGUEL ANGEL PUENTES CASTRO", "OLGA LUCIA BEDOYA"],
+      institutions: ["UNIVERSIDAD TECNOLÓGICA DE PEREIRA"],
+      product: "Pereira imaginada: por los croquis"
+    }
   ]
 };
 
@@ -300,6 +1279,9 @@ export default function App() {
               <a href="#bio" className="hover:text-indigo-600 transition-colors">Bio</a>
               <a href="#cv" className="hover:text-indigo-600 transition-colors">Formación</a>
               <a href="#experience" className="hover:text-indigo-600 transition-colors">Experiencia</a>
+              <a href="#tutoring" className="hover:text-indigo-600 transition-colors">Tutorías</a>
+              <a href="#jury" className="hover:text-indigo-600 transition-colors">Jurados</a>
+              <a href="#events" className="hover:text-indigo-600 transition-colors">Eventos</a>
               <a href="#complementary" className="hover:text-indigo-600 transition-colors">Cursos</a>
               <a href="#products" className="hover:text-indigo-600 transition-colors">Publicaciones</a>
             </div>
@@ -493,6 +1475,143 @@ export default function App() {
                             {exp.activities.research.map((r, i) => <li key={i} className="flex gap-2"><span>•</span> {r}</li>)}
                           </ul>
                         </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+        
+        {/* Sección Trabajos Dirigidos / Tutorías */}
+        <section id="tutoring" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'tutoring' ? 'expanded' : ''}`}>
+          <div className="glass rounded-3xl p-6 md:p-12">
+            <div className="flex justify-between items-center mb-6 md:mb-8">
+              <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
+                <Users className="text-indigo-600" /> Trabajos Dirigidos / Tutorías
+              </h2>
+              <button 
+                onClick={() => toggleSection('tutoring')}
+                className="text-indigo-400 hover:text-indigo-600 transition-colors p-2"
+              >
+                {expandedSection === 'tutoring' ? <ChevronUp size={20} className="md:w-[24px]" /> : <ChevronDown size={20} className="md:w-[24px]" />}
+              </button>
+            </div>
+
+            <div className="expandable-content">
+              <div className="space-y-4 md:space-y-6">
+                {PROFESSOR_DATA.tutoring.map((item, idx) => (
+                  <div key={idx} className="p-4 md:p-6 rounded-2xl bg-white/20 border border-white/30 hover:bg-white/40 transition-colors group">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
+                        {item.type}
+                      </span>
+                      <span className="text-xs font-bold text-gray-500">{item.year}</span>
+                    </div>
+                    <h3 className="font-semibold text-base md:text-lg group-hover:text-indigo-800 transition-colors mb-2">
+                      {item.title}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm">
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Institución:</span> {item.institution}</p>
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Estado:</span> {item.status}</p>
+                      {item.student && (
+                        <p className="text-gray-600 md:col-span-2"><span className="font-bold text-indigo-900/70">Persona(s) orientada(s):</span> {item.student}</p>
+                      )}
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Rol:</span> {item.role}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sección Jurado en comités de evaluación */}
+        <section id="jury" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'jury' ? 'expanded' : ''}`}>
+          <div className="glass rounded-3xl p-6 md:p-12">
+            <div className="flex justify-between items-center mb-6 md:mb-8">
+              <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
+                <Gavel className="text-indigo-600" /> Jurado en Comités de Evaluación
+              </h2>
+              <button 
+                onClick={() => toggleSection('jury')}
+                className="text-indigo-400 hover:text-indigo-600 transition-colors p-2"
+              >
+                {expandedSection === 'jury' ? <ChevronUp size={20} className="md:w-[24px]" /> : <ChevronDown size={20} className="md:w-[24px]" />}
+              </button>
+            </div>
+
+            <div className="expandable-content">
+              <div className="space-y-4 md:space-y-6">
+                {PROFESSOR_DATA.jury.map((item, idx) => (
+                  <div key={idx} className="p-4 md:p-6 rounded-2xl bg-white/20 border border-white/30 hover:bg-white/40 transition-colors group">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+                      <span className="text-[10px] uppercase tracking-widest font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
+                        {item.type}
+                      </span>
+                    </div>
+                    <h3 className="font-semibold text-base md:text-lg group-hover:text-indigo-800 transition-colors mb-2">
+                      {item.title}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm">
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Institución:</span> {item.institution}</p>
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Programa:</span> {item.program}</p>
+                      {item.student && (
+                        <p className="text-gray-600 md:col-span-2"><span className="font-bold text-indigo-900/70">Persona(s) orientada(s):</span> {item.student}</p>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Sección Eventos Científicos */}
+        <section id="events" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'events' ? 'expanded' : ''}`}>
+          <div className="glass rounded-3xl p-6 md:p-12">
+            <div className="flex justify-between items-center mb-6 md:mb-8">
+              <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
+                <Calendar className="text-indigo-600" /> Eventos Científicos
+              </h2>
+              <button 
+                onClick={() => toggleSection('events')}
+                className="text-indigo-400 hover:text-indigo-600 transition-colors p-2"
+              >
+                {expandedSection === 'events' ? <ChevronUp size={20} className="md:w-[24px]" /> : <ChevronDown size={20} className="md:w-[24px]" />}
+              </button>
+            </div>
+
+            <div className="expandable-content">
+              <div className="space-y-4 md:space-y-6">
+                {PROFESSOR_DATA.events.map((event, idx) => (
+                  <div key={idx} className="p-4 md:p-6 rounded-2xl bg-white/20 border border-white/30 hover:bg-white/40 transition-colors group">
+                    <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 mb-3">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="text-[10px] uppercase tracking-widest font-bold text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded">
+                          {event.type}
+                        </span>
+                        <span className="text-[10px] uppercase tracking-widest font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                          {event.scope}
+                        </span>
+                      </div>
+                      <span className="text-xs font-bold text-gray-500">{event.date}</span>
+                    </div>
+                    <h3 className="font-semibold text-base md:text-lg group-hover:text-indigo-800 transition-colors mb-2">
+                      {idx + 1}. {event.name}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-2 text-xs md:text-sm">
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Ubicación:</span> {event.location}</p>
+                      <p className="text-gray-600"><span className="font-bold text-indigo-900/70">Rol:</span> {event.role}</p>
+                      {event.participants && event.participants.length > 0 && (
+                        <p className="text-gray-600 md:col-span-2"><span className="font-bold text-indigo-900/70">Participantes:</span> {event.participants.join(", ")}</p>
+                      )}
+                      {event.institutions && event.institutions.length > 0 && (
+                        <p className="text-gray-600 md:col-span-2"><span className="font-bold text-indigo-900/70">Instituciones:</span> {event.institutions.join(", ")}</p>
+                      )}
+                      {event.product && (
+                        <p className="text-indigo-600 md:col-span-2 italic"><span className="font-bold text-indigo-900/70 not-italic">Producto:</span> {event.product}</p>
                       )}
                     </div>
                   </div>
