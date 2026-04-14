@@ -2168,117 +2168,98 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      <main className="max-w-7xl mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-20">
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-start">
-          
-          {/* Panel Lateral Persistente (Info del Profe) */}
-          <aside className="w-full lg:w-80 xl:w-96 lg:sticky lg:top-28 z-10">
-            <div className="glass rounded-3xl p-6 md:p-8 shadow-xl border-white/40 flex flex-col items-center lg:items-start text-center lg:text-left">
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-white/50 shadow-lg mb-6 flex-shrink-0 mx-auto lg:mx-0">
-                <img 
-                  src={PROFESSOR_DATA.profileImage} 
-                  alt={PROFESSOR_DATA.name} 
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              
-              <h1 className="serif text-2xl md:text-3xl font-bold mb-2 text-indigo-950 leading-tight">
+      <main className="max-w-5xl mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-20 space-y-8 md:space-y-12">
+        
+        {/* Sección Bio / Hero (Siempre visible y centrada) */}
+        <section id="bio" className="scroll-mt-20 md:scroll-mt-28">
+          <div className="glass rounded-3xl p-8 md:p-12 flex flex-col items-center text-center relative overflow-hidden">
+            {/* Foto de Perfil Centrada */}
+            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/50 shadow-xl mb-8 flex-shrink-0">
+              <img 
+                src={PROFESSOR_DATA.profileImage} 
+                alt={PROFESSOR_DATA.name} 
+                className="w-full h-full object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </div>
+
+            {/* Información Principal */}
+            <div className="max-w-3xl mx-auto">
+              <h1 className="serif text-3xl md:text-5xl font-bold mb-3 text-indigo-950 leading-tight">
                 {PROFESSOR_DATA.name}
               </h1>
-              <p className="text-sm md:text-base text-indigo-600 font-medium mb-6 italic serif">
+              <p className="text-lg md:text-xl text-indigo-600 font-medium mb-6 italic serif">
                 {PROFESSOR_DATA.title}
               </p>
-
-              <div className="w-full space-y-3 mb-8">
-                <div className="flex items-center gap-3 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2.5 rounded-2xl border border-white/30 shadow-sm">
-                  <MapPin size={16} className="text-indigo-500 shrink-0" /> 
-                  <span className="truncate">{PROFESSOR_DATA.location}</span>
-                </div>
-                <div className="flex items-center gap-3 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2.5 rounded-2xl border border-white/30 shadow-sm">
-                  <Mail size={16} className="text-indigo-500 shrink-0" /> 
-                  <span className="truncate">{PROFESSOR_DATA.email}</span>
-                </div>
+              
+              <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
+                <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2 rounded-full border border-white/30 shadow-sm">
+                  <MapPin size={14} className="text-indigo-500" /> {PROFESSOR_DATA.location}
+                </span>
+                <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2 rounded-full border border-white/30 shadow-sm">
+                  <Mail size={14} className="text-indigo-500" /> {PROFESSOR_DATA.email}
+                </span>
               </div>
 
-              <div className="w-full">
-                <h3 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.2em] mb-4 px-1">Conexiones Profesionales</h3>
-                <div className="grid grid-cols-5 lg:grid-cols-3 gap-2 md:gap-3">
-                  <a 
-                    href={PROFESSOR_DATA.social.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    data-tooltip="LinkedIn" 
-                    className="social-btn group p-3 glass rounded-xl hover:bg-[#0077b5] hover:scale-110 text-[#0077b5] hover:text-white shadow-sm transition-all flex items-center justify-center"
-                  >
-                    <Linkedin size={20} />
-                  </a>
-                  <a 
-                    href={PROFESSOR_DATA.social.scholar} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    data-tooltip="Google Scholar" 
-                    className="social-btn group p-3 glass rounded-xl hover:bg-[#4285F4] hover:scale-110 text-[#4285F4] hover:text-white shadow-sm transition-all flex items-center justify-center"
-                  >
-                    <GoogleScholarIcon size={20} />
-                  </a>
-                  <a 
-                    href={PROFESSOR_DATA.social.researchgate} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    data-tooltip="ResearchGate" 
-                    className="social-btn group p-3 glass rounded-xl hover:bg-[#00ccbb] hover:scale-110 text-[#00ccbb] hover:text-white shadow-sm transition-all flex items-center justify-center"
-                  >
-                    <ResearchGateIcon size={20} />
-                  </a>
-                  <a 
-                    href={PROFESSOR_DATA.social.academia} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    data-tooltip="Academia.edu" 
-                    className="social-btn group p-3 glass rounded-xl hover:bg-[#313535] hover:scale-110 text-[#313535] hover:text-white shadow-sm transition-all flex items-center justify-center"
-                  >
-                    <AcademiaIcon size={20} />
-                  </a>
-                  <a 
-                    href={PROFESSOR_DATA.social.repository} 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    data-tooltip="Repositorio UTP" 
-                    className="social-btn group p-3 glass rounded-xl hover:bg-indigo-600 hover:scale-110 text-indigo-600 hover:text-white shadow-sm transition-all flex items-center justify-center"
-                  >
-                    <Library size={20} />
-                  </a>
-                </div>
+              {/* Redes Sociales Centradas */}
+              <div className="flex flex-wrap justify-center gap-3 mb-10">
+                <a 
+                  href={PROFESSOR_DATA.social.linkedin} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  data-tooltip="LinkedIn" 
+                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#0077b5] hover:scale-110 text-[#0077b5] hover:text-white shadow-sm transition-all"
+                >
+                  <Linkedin size={22} />
+                </a>
+                <a 
+                  href={PROFESSOR_DATA.social.scholar} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  data-tooltip="Google Scholar" 
+                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#4285F4] hover:scale-110 text-[#4285F4] hover:text-white shadow-sm transition-all"
+                >
+                  <GoogleScholarIcon size={22} />
+                </a>
+                <a 
+                  href={PROFESSOR_DATA.social.researchgate} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  data-tooltip="ResearchGate" 
+                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#00ccbb] hover:scale-110 text-[#00ccbb] hover:text-white shadow-sm transition-all"
+                >
+                  <ResearchGateIcon size={22} />
+                </a>
+                <a 
+                  href={PROFESSOR_DATA.social.academia} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  data-tooltip="Academia.edu" 
+                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#313535] hover:scale-110 text-[#313535] hover:text-white shadow-sm transition-all"
+                >
+                  <AcademiaIcon size={22} />
+                </a>
+                <a 
+                  href={PROFESSOR_DATA.social.repository} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  data-tooltip="Repositorio UTP" 
+                  className="social-btn group p-4 glass rounded-2xl hover:bg-indigo-600 hover:scale-110 text-indigo-600 hover:text-white shadow-sm transition-all"
+                >
+                  <Library size={22} />
+                </a>
+              </div>
+
+              {/* Biografía (Siempre Visible) */}
+              <div className="border-t border-indigo-100 pt-8">
+                <h3 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] mb-4">Perfil Profesional</h3>
+                <p className="text-base md:text-lg leading-relaxed text-gray-700 text-justify md:text-center">
+                  {PROFESSOR_DATA.bio}
+                </p>
               </div>
             </div>
-          </aside>
-
-          {/* Contenido Principal */}
-          <div className="flex-1 w-full space-y-8 md:space-y-12">
-            
-            {/* Sección Bio */}
-            <section id="bio" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'bio' ? 'expanded' : ''}`}>
-              <div className="glass rounded-3xl p-6 md:p-10 relative overflow-hidden">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-1.5 h-6 bg-indigo-500 rounded-full" />
-                  <h2 className="serif text-2xl md:text-3xl font-bold text-indigo-950">Perfil Profesional</h2>
-                </div>
-                
-                <div className="expandable-content">
-                  <p className="text-base md:text-lg leading-relaxed text-gray-700 mb-4">
-                    {PROFESSOR_DATA.bio}
-                  </p>
-                </div>
-                
-                <button 
-                  onClick={() => toggleSection('bio')}
-                  className="absolute bottom-4 right-6 text-indigo-400 hover:text-indigo-600 transition-colors p-2"
-                >
-                  {expandedSection === 'bio' ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                </button>
-              </div>
-            </section>
+          </div>
+        </section>
 
         {/* Sección Trayectoria (CV) */}
         <section id="cv" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'cv' ? 'expanded' : ''}`}>
@@ -3056,8 +3037,6 @@ export default function App() {
           </div>
         </section>
 
-          </div>
-        </div>
       </main>
 
       {/* Footer */}
