@@ -1877,12 +1877,15 @@ export default function App() {
     setSearchResults(results.slice(0, 10)); // Limitar a 10 resultados para rendimiento
   }, [searchQuery]);
 
-  // Atajo de teclado para búsqueda (Ctrl+K)
+  // Atajo de teclado para búsqueda (Ctrl+K y ESC)
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
         e.preventDefault();
         setIsSearchOpen(true);
+      }
+      if (e.key === 'Escape') {
+        setIsSearchOpen(false);
       }
     };
     window.addEventListener('keydown', handleKeyDown);
