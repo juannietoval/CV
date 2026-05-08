@@ -30,6 +30,14 @@ import {
 import { motion, AnimatePresence } from 'motion/react';
 import { AcademiaIcon, GoogleScholarIcon, ResearchGateIcon } from './components/CustomIcons';
 
+// --- CONFIGURACIÓN DE ANIMACIÓN ---
+const scrollRevealProps = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true, amount: 0.15 },
+  transition: { duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }
+};
+
 // --- DATA CONFIGURATION (El profesor puede editar esto fácilmente) ---
 const PROFESSOR_DATA = {
   name: "Miguel Angel Puentes Castro",
@@ -2174,99 +2182,150 @@ export default function App() {
       <main className="max-w-5xl mx-auto px-4 md:px-6 pt-24 md:pt-32 pb-20 space-y-8 md:space-y-12">
         
         {/* Sección Bio / Hero (Siempre visible y centrada) */}
-        <section id="bio" className="scroll-mt-20 md:scroll-mt-28">
-          <div className="glass rounded-3xl p-8 md:p-12 flex flex-col items-center text-center relative overflow-hidden">
-            {/* Foto de Perfil Centrada */}
-            <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/50 shadow-xl mb-8 flex-shrink-0">
-              <img 
-                src={PROFESSOR_DATA.profileImage} 
-                alt={PROFESSOR_DATA.name} 
-                className="w-full h-full object-cover"
-                referrerPolicy="no-referrer"
+        <motion.section 
+          id="bio" 
+          className="scroll-mt-20 md:scroll-mt-28 w-full"
+          {...scrollRevealProps}
+        >
+          <div className="glass rounded-3xl p-8 md:p-12 flex flex-col items-center text-center relative overflow-hidden w-full max-w-full md:max-w-[95%] lg:max-w-[90%] xl:max-w-full mx-auto transition-all duration-300">
+            {/* Fondo Mesh Gradient Animado */}
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+              <motion.div 
+                className="absolute w-64 h-64 bg-purple-400/10 rounded-full blur-[100px]"
+                animate={{
+                  x: [0, 100, -50, 0],
+                  y: [0, -50, 100, 0],
+                }}
+                transition={{
+                  duration: 20,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+                style={{ top: '10%', left: '15%' }}
+              />
+              <motion.div 
+                className="absolute w-80 h-80 bg-blue-300/10 rounded-full blur-[100px]"
+                animate={{
+                  x: [0, -120, 80, 0],
+                  y: [0, 100, -60, 0],
+                }}
+                transition={{
+                  duration: 25,
+                  repeat: Infinity,
+                  ease: "linear"
+                }}
+                style={{ bottom: '10%', right: '15%' }}
               />
             </div>
 
-            {/* Información Principal */}
-            <div className="max-w-3xl mx-auto">
-              <h1 className="serif text-3xl md:text-5xl font-bold mb-3 text-indigo-950 leading-tight">
-                {PROFESSOR_DATA.name}
-              </h1>
-              <p className="text-lg md:text-xl text-indigo-600 font-medium mb-6 italic serif">
-                {PROFESSOR_DATA.title}
-              </p>
-              
-              <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
-                <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2 rounded-full border border-white/30 shadow-sm">
-                  <MapPin size={14} className="text-indigo-500" /> {PROFESSOR_DATA.location}
-                </span>
-                <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2 rounded-full border border-white/30 shadow-sm">
-                  <Mail size={14} className="text-indigo-500" /> {PROFESSOR_DATA.email}
-                </span>
+            {/* Contenido (con z-index para asegurar legibilidad) */}
+            <div className="relative z-10 flex flex-col items-center">
+              {/* Foto de Perfil Centrada */}
+              <div className="w-32 h-32 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white/50 shadow-xl mb-8 flex-shrink-0">
+                <img 
+                  src={PROFESSOR_DATA.profileImage} 
+                  alt={PROFESSOR_DATA.name} 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
               </div>
 
-              {/* Redes Sociales Centradas */}
-              <div className="flex flex-wrap justify-center gap-3 mb-10">
-                <a 
-                  href={PROFESSOR_DATA.social.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  data-tooltip="LinkedIn" 
-                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#0077b5] hover:scale-110 text-[#0077b5] hover:text-white shadow-sm transition-all"
+              {/* Información Principal */}
+              <div className="max-w-3xl mx-auto">
+                <motion.h1 
+                  className="serif text-3xl md:text-5xl font-bold mb-3 text-indigo-950 leading-tight cursor-default transition-colors duration-700 hover:text-[#6366f1]"
+                  whileHover={{ x: 5, opacity: 1 }}
+                  initial={{ opacity: 0.98 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <Linkedin size={22} />
-                </a>
-                <a 
-                  href={PROFESSOR_DATA.social.scholar} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  data-tooltip="Google Scholar" 
-                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#4285F4] hover:scale-110 text-[#4285F4] hover:text-white shadow-sm transition-all"
-                >
-                  <GoogleScholarIcon size={22} />
-                </a>
-                <a 
-                  href={PROFESSOR_DATA.social.researchgate} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  data-tooltip="ResearchGate" 
-                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#00ccbb] hover:scale-110 text-[#00ccbb] hover:text-white shadow-sm transition-all"
-                >
-                  <ResearchGateIcon size={22} />
-                </a>
-                <a 
-                  href={PROFESSOR_DATA.social.academia} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  data-tooltip="Academia.edu" 
-                  className="social-btn group p-4 glass rounded-2xl hover:bg-[#313535] hover:scale-110 text-[#313535] hover:text-white shadow-sm transition-all"
-                >
-                  <AcademiaIcon size={22} />
-                </a>
-                <a 
-                  href={PROFESSOR_DATA.social.repository} 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  data-tooltip="Repositorio UTP" 
-                  className="social-btn group p-4 glass rounded-2xl hover:bg-indigo-600 hover:scale-110 text-indigo-600 hover:text-white shadow-sm transition-all"
-                >
-                  <Library size={22} />
-                </a>
-              </div>
-
-              {/* Biografía (Siempre Visible) */}
-              <div className="border-t border-indigo-100 pt-8">
-                <h3 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] mb-4">Perfil Profesional</h3>
-                <p className="text-base md:text-lg leading-relaxed text-gray-700 text-justify md:text-center">
-                  {PROFESSOR_DATA.bio}
+                  {PROFESSOR_DATA.name}
+                </motion.h1>
+                <p className="text-lg md:text-xl text-indigo-600 font-medium mb-6 italic serif">
+                  {PROFESSOR_DATA.title}
                 </p>
+                
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4 mb-8">
+                  <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2 rounded-full border border-white/30 shadow-sm">
+                    <MapPin size={14} className="text-indigo-500" /> {PROFESSOR_DATA.location}
+                  </span>
+                  <span className="flex items-center gap-2 text-xs md:text-sm text-gray-600 bg-white/40 px-4 py-2 rounded-full border border-white/30 shadow-sm">
+                    <Mail size={14} className="text-indigo-500" /> {PROFESSOR_DATA.email}
+                  </span>
+                </div>
+
+                {/* Redes Sociales Centradas */}
+                <div className="flex flex-wrap justify-center gap-3 mb-10">
+                  <a 
+                    href={PROFESSOR_DATA.social.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-tooltip="LinkedIn" 
+                    className="social-btn group p-4 glass rounded-2xl hover:bg-[#0077b5] hover:scale-110 text-[#0077b5] hover:text-white shadow-sm transition-all"
+                  >
+                    <Linkedin size={22} />
+                  </a>
+                  <a 
+                    href={PROFESSOR_DATA.social.scholar} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-tooltip="Google Scholar" 
+                    className="social-btn group p-4 glass rounded-2xl hover:bg-[#4285F4] hover:scale-110 text-[#4285F4] hover:text-white shadow-sm transition-all"
+                  >
+                    <GoogleScholarIcon size={22} />
+                  </a>
+                  <a 
+                    href={PROFESSOR_DATA.social.researchgate} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-tooltip="ResearchGate" 
+                    className="social-btn group p-4 glass rounded-2xl hover:bg-[#00ccbb] hover:scale-110 text-[#00ccbb] hover:text-white shadow-sm transition-all"
+                  >
+                    <ResearchGateIcon size={22} />
+                  </a>
+                  <a 
+                    href={PROFESSOR_DATA.social.academia} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-tooltip="Academia.edu" 
+                    className="social-btn group p-4 glass rounded-2xl hover:bg-[#313535] hover:scale-110 text-[#313535] hover:text-white shadow-sm transition-all"
+                  >
+                    <AcademiaIcon size={22} />
+                  </a>
+                  <a 
+                    href={PROFESSOR_DATA.social.repository} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    data-tooltip="Repositorio UTP" 
+                    className="social-btn group p-4 glass rounded-2xl hover:bg-indigo-600 hover:scale-110 text-indigo-600 hover:text-white shadow-sm transition-all"
+                  >
+                    <Library size={22} />
+                  </a>
+                </div>
+
+                {/* Biografía (Siempre Visible) */}
+                <motion.div 
+                  className="border-t border-indigo-100 pt-8 cursor-default group/bio"
+                  whileHover={{ x: 5, opacity: 1 }}
+                  initial={{ opacity: 0.98 }}
+                  transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <h3 className="text-[10px] font-black text-indigo-400 uppercase tracking-[0.3em] mb-4 transition-colors duration-700 group-hover/bio:text-[#6366f1]">Perfil Profesional</h3>
+                  <p className="text-base md:text-lg leading-relaxed text-gray-700 text-justify md:text-center transition-colors duration-700 group-hover/bio:text-gray-900">
+                    {PROFESSOR_DATA.bio}
+                  </p>
+                </motion.div>
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Trayectoria (CV) */}
-        <section id="cv" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'cv' ? 'expanded' : ''}`}>
-          <div className="glass rounded-3xl p-6 md:p-12">
+        <motion.section 
+          id="cv" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 w-full ${expandedSection === 'cv' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
+          <div className="glass rounded-3xl p-6 md:p-12 w-full max-w-full md:max-w-[95%] lg:max-w-[90%] xl:max-w-full mx-auto transition-all duration-300">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
                 <GraduationCap className="text-indigo-600" /> Formación Académica
@@ -2299,10 +2358,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Experiencia Profesional */}
-        <section id="experience" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'experience' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="experience" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'experience' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2362,10 +2425,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
         
         {/* Sección Trabajos Dirigidos / Tutorías */}
-        <section id="tutoring" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'tutoring' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="tutoring" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'tutoring' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2405,10 +2472,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Jurado en comités de evaluación */}
-        <section id="jury" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'jury' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="jury" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'jury' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2446,10 +2517,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Eventos Científicos */}
-        <section id="events" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'events' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="events" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'events' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2499,10 +2574,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Redes de Conocimiento Especializado */}
-        <section id="networks" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'networks' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="networks" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'networks' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2538,10 +2617,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Impacto Social y Apropiación del Conocimiento */}
-        <section id="social" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'social' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="social" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'social' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2595,10 +2678,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Producciones de Contenido Digital Audiovisual */}
-        <section id="audiovisual" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'audiovisual' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="audiovisual" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'audiovisual' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2651,10 +2738,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Artículos */}
-        <section id="articles" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'articles' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="articles" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'articles' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2698,10 +2789,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Textos en publicaciones no científicas */}
-        <section id="divulgation" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'divulgation' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="divulgation" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'divulgation' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2758,10 +2853,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Libros de divulgación y/o Compilación de divulgación */}
-        <section id="divulgation-books" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'divulgation-books' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="divulgation-books" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'divulgation-books' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2804,10 +2903,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Informes de Investigación */}
-        <section id="reports" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'reports' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="reports" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'reports' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2848,10 +2951,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Obras o productos */}
-        <section id="artistic" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'artistic' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="artistic" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'artistic' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2910,10 +3017,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Proyectos */}
-        <section id="projects" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'projects' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="projects" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'projects' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2953,10 +3064,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Formación Complementaria */}
-        <section id="complementary" className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'complementary' ? 'expanded' : ''}`}>
+        <motion.section 
+          id="complementary" 
+          className={`scroll-mt-20 md:scroll-mt-28 transition-all duration-500 ${expandedSection === 'complementary' ? 'expanded' : ''}`}
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <div className="flex justify-between items-center mb-6 md:mb-8">
               <h2 className="serif text-2xl md:text-3xl font-bold flex items-center gap-3">
@@ -2986,10 +3101,14 @@ export default function App() {
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Sección Hub de Productos (Publicaciones) */}
-        <section id="products" className="scroll-mt-20 md:scroll-mt-28">
+        <motion.section 
+          id="products" 
+          className="scroll-mt-20 md:scroll-mt-28"
+          {...scrollRevealProps}
+        >
           <div className="glass rounded-3xl p-6 md:p-12">
             <h2 className="serif text-2xl md:text-3xl font-bold mb-8 md:mb-12 flex items-center gap-3">
               <BookOpen className="text-indigo-600" /> Publicaciones
@@ -3038,7 +3157,7 @@ export default function App() {
               ))}
             </div>
           </div>
-        </section>
+        </motion.section>
 
       </main>
 
